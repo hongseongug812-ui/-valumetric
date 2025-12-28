@@ -1,0 +1,36 @@
+# Build outputs
+build/
+out/
+target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# Logs
+*.log
+logs/
+
+# Environment files (민감정보)
+.env
+*.env.local
+
+# Node modules
+node_modules/
+
+# Frontend build
+frontend/dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+*.swp

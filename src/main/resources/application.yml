@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: valumetric
+
+  # MongoDB 설정
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+      database: valumetric
+
+  # Spring Batch 설정 (MongoDB용)
+  batch:
+    job:
+      enabled: false
+    mongo:
+      collection-prefix: BATCH_
+
+# JWT 설정 (환경변수에서 로드)
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION:86400000}
+  refresh-expiration: ${JWT_REFRESH_EXPIRATION:604800000}
+
+# 서버 포트
+server:
+  port: ${SERVER_PORT:8080}
+
+# 로깅 설정
+logging:
+  level:
+    org.springframework.batch: INFO
+    org.springframework.security: DEBUG
+    org.springframework.data.mongodb: DEBUG
+    com.valumetric: DEBUG
+
